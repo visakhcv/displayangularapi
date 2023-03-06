@@ -1,0 +1,21 @@
+.main{
+    display: flex;
+    justify-content: center;
+}
+.search{
+    display: flex;
+    justify-content: center;
+}
+.search input{
+    width: 350px;
+}
+.color2{
+    background-color: #D0D0D0	;
+}
+.color1{
+    background-color: #E8E8E8;
+}
+img{
+    width: 100px;
+    height: 100px;
+}

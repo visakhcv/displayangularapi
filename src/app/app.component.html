@@ -1,0 +1,34 @@
+<div class="row main">
+      <h1 class="text-center">Contact Details</h1>
+      <div class="search">
+      <input type="search" [(ngModel)]='searchkey'  class="form-control" placeholder="search your Contact first name">
+      </div>
+    <div> 
+      <table class="table container mt-3" >
+        <thead>
+          <tr class="text-center">
+            <th class="color1">Name</th>
+            <th class="color2">Image</th>
+            <th class="color1">Age</th>
+            <th class="color2">Email</th>
+            <th class="color1"> Phone</th>
+            <th class="color2">Address</th>
+            <th class="color1">Company name</th>
+            <th class="color2">Job Title</th>
+          </tr>
+        </thead>
+        <tbody >
+            <tr class="text-center"  *ngFor="let user of allcontact | filter : searchkey : 'firstName':'lastName'">
+              <td class="color1">{{user.firstName}} {{user.lastName}}</td>
+              <td class="color2"><img [src]="user.image" alt=""></td>
+              <td class="color1">{{user.age}}</td>
+              <td class="color2">{{user.email}}</td>
+              <td class="color1 ">{{user.phone}}</td>
+              <td class="color2">{{user.address.address}} {{","}} {{user.address.state}}</td>
+              <td class="color1">{{user.company.name}}</td>
+              <td class="color2">{{user.company.title}}</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
